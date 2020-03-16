@@ -1,4 +1,5 @@
 **dictionarySize = 200 pyramidLevels= 2**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/200-2.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
