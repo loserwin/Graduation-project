@@ -1,5 +1,8 @@
 200 2
 
+截图：
+![Alt text](https://github.com/loserwin/Graduation-project/blob/master/resultpic/200-2.jpg)
+
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
 
