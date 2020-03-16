@@ -14,6 +14,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 84.1667% (101/120) (classification)
 
 **dictionarySize = 200 pyramidLevels= 3**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/200-3.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -28,6 +29,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 86.6667% (104/120) (classification)
 
 **dictionarySize = 200 pyramidLevels= 4**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/200-4.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -42,6 +44,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 83.3333% (100/120) (classification)
 
 **dictionarySize =200 pyramidLevels= 5**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/200-5.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -56,6 +59,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 83.3333% (100/120) (classification)
 
 **dictionarySize = 100 pyramidLevels= 1**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/100-1.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -70,6 +74,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 75.8333% (91/120) (classification)
 
 **dictionarySize = 100 pyramidLevels= 2**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/100-2.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -84,6 +89,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 84.1667% (101/120) (classification)
 
 **dictionarySize = 100 pyramidLevels= 3**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/100-3.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -98,6 +104,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 85.8333% (103/120) (classification)
 
 **dictionarySize = 100 pyramidLevels= 4**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/100-4.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -112,6 +119,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 82.5% (99/120) (classification)
 
 **dictionarySize = 100 pyramidLevels= 5**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/100-5.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -126,6 +134,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 82.5% (99/120) (classification)
 
 **dictionarySize = 50 pyramidLevels= 3**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/50-3.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -140,6 +149,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 86.6667% (104/120) (classification)
 
 **dictionarySize = 50 pyramidLevels= 5**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/50-5.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -154,6 +164,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 84.1667% (101/120) (classification)
 
 **dictionarySize = 50 pyramidLevels= 6**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/50-6.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -168,6 +179,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 82.5% (99/120) (classification)
 
 **dictionarySize = 300 pyramidLevels= 3**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/300-3.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
@@ -182,6 +194,7 @@ Classification using Pyramid BOW histogram intersection kernel svm
 Accuracy = 90.8333% (109/120) (classification)
 
 **dictionarySize = 400 pyramidLevels= 3**
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/400-3.jpg)
 
 Classification using BOW rbf_svm
 Accuracy = 77.5% (93/120) (classification)
