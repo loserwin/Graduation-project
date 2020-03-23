@@ -45,5 +45,16 @@ SIFT算法实现特征匹配主要有以下三个流程：
 
 3/22
 
-更换了测试数据集，试验了代码对不同图片的检测效率。
+更换了测试数据集，试验代码对不同图片的检测效率。
+
+出错
+错误使用 confusionmat (line 67)
+G and GHAT need to be vectors or 2D character arrays.
+
+出错 do_p_classification_inter_svm (line 56)
+confusion_matrix = confusionmat(test_labels,predict_label);
+
+出错 main (line 53)
+do_p_classification_inter_svm
+
 
