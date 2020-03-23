@@ -1,0 +1,6 @@
+更换数据集，看图像测试结果有何改变
+
+ 把GenerateSiftDescriptors函数从sift提取图像特征更换为用lbp描述图像特征，看结果有何改变
+
+ 把CalculateDictionary函数从利用k-means聚类更换为分层聚类，看结果有何改变
+
