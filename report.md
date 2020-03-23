@@ -43,4 +43,7 @@ SIFT算法实现特征匹配主要有以下三个流程：
 
 仔细阅读了Beyond bags of features: Spatial Pyramid Matching这篇论文，简单理解了空间金字塔概念对特征匹配的优化。
 
+3/22
+
+更换了测试数据集，试验了代码对不同图片的检测效率。
 
