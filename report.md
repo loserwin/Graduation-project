@@ -58,6 +58,7 @@ confusion_matrix = confusionmat(test_labels,predict_label);
 do_p_classification_inter_svm
 
 4/5
+
 使用lbp特征代替sift特征
 结果Accuracy = 35.5556% (64/180) (classification)准确率下降严重
 
