@@ -65,7 +65,7 @@ do_p_classification_inter_svm
 
 ![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/lbp.jpg)
 
-准确率下降严重
+结果准确率过低，正在寻找原因。
 
 
 
