@@ -60,10 +60,10 @@ do_p_classification_inter_svm
 4/5
 
 使用lbp特征代替sift特征
-使用原数据集结果Accuracy = 40% (72/180) (classification)
+使用原数据集结果Accuracy = 42.7778% (77/180) (classification)
 混淆矩阵图
 
-![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/lbp.jpg)
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/lbp2.jpg)
 
 结果准确率过低，正在寻找原因。
 
