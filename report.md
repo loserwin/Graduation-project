@@ -71,8 +71,14 @@ do_p_classification_inter_svm
 
 计算汉明距离，实现图像检索。
 对于数据集内图像，能够准确检索。
+
 ![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/research1.jpg)
+
 对于数据集外图像，无法找到最接近的图像
+
 ![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/research3.jpg)
+
 使用空间金字塔处理后的特征计算汉明距离，依旧无法对于数据集外图像得到符合认知的近似图像
+
 ![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/research2.jpg)
+
