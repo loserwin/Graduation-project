@@ -92,3 +92,14 @@ INRIA Holidays 数据集与Oxford Buildings Dataset 下载速度太慢，开vpn�
 因为使用数据集外随机图像进行检索，检索后结果不能很好量化比较准确度。所以使用一定图像处理后的数据集内图像进行检索，以是否能检索到原图测试检索精度。
 
 无法在设计好的迭代次数内收敛。
+
+旋转45度，裁剪两侧黑框，相似的5张中无原图，无同类图片
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/r1.jpg)
+
+水平翻转，裁剪两侧，相似的5张中无原图，有同类图片
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/r2.jpg)
+
+旋转90度，相似的5张中有原图，但不是第一张
+![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/r3.jpg)
+
+
