@@ -11,7 +11,7 @@ dictionarySize = pyramid_opts.dictionarySize;
 pyramidLevels = pyramid_opts.pyramidLevels;
 
 try
-    pyramid_opts2=getfield(load([opts.globaldatapath,'/',pyramid_opts.name,'_settings']),'pyramid_opts');
+    pyramid_opts2=getfield(load([opts.globaldatapath,'\',pyramid_opts.name,'_settings']),'pyramid_opts');
     if(isequal(pyramid_opts,pyramid_opts2))
         pyramid_flag=0;
         display(' Pyramid has already been computed for this settings');
@@ -30,7 +30,7 @@ if(pyramid_flag)
         
         
         %% load texton indices
-        image_dir=sprintf('%s/%s/',opts.localdatapath,num2string(f,8)); % location descriptor
+        image_dir=sprintf('%s\\%s\\',opts.localdatapath,num2string(f,8)); % location descriptor
         inFName = fullfile(image_dir, sprintf('%s', texton_name));
         load(inFName, 'texton_ind');
         
@@ -86,9 +86,9 @@ if(pyramid_flag)
     end % f
     
     pyramid_all=pyramid_all';
-    save ([opts.globaldatapath,'/',pyramid_opts.name],'pyramid_all');
+    save ([opts.globaldatapath,'\',pyramid_opts.name],'pyramid_all');
     
-    save ([opts.globaldatapath,'/',pyramid_opts.name,'_settings'],'pyramid_opts');
+    save ([opts.globaldatapath,'\',pyramid_opts.name,'_settings'],'pyramid_opts');
 end
 
 end

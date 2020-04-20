@@ -5,7 +5,7 @@ fprintf('\nClassification using histogram intersection kernel svm\n');
 load(pg_opts.trainset);
 load(pg_opts.testset);
 load(pg_opts.labels);
-load([pg_opts.globaldatapath,'/',assignment_opts.name])
+load([pg_opts.globaldatapath,'\',assignment_opts.name])
 
 
 train_labels    = labels(trainset);          % contains the labels of the trainset
@@ -46,5 +46,5 @@ model=svmtrain(train_labels,kernel_train,options);
 kernel_test = hist_isect(test_data,train_data);
 kernel_test = [(1:size(kernel_test,1))',kernel_test];
 
-%[predict_label, accuracy , dec_values] = svmpredict(test_labels,test_data, model,'-b 1');
+
 [predict_label, accuracy , dec_values] = svmpredict(test_labels,kernel_test, model,'-b 1');

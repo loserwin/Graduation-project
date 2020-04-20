@@ -35,20 +35,23 @@ assignment_opts.texton_name='texton_ind';
 do_assignment(pg_opts,assignment_opts);
 
 %% CompilePyramid
-pyramid_opts.name='spatial_pyramid';
-pyramid_opts.dictionarySize=dictionary_opts.dictionarySize;
-pyramid_opts.pyramidLevels=3;
-pyramid_opts.texton_name=assignment_opts.texton_name;
-CompilePyramid(pg_opts,pyramid_opts);
 
-%% Classification
-do_classification_rbf_svm
+% pyramid_opts.name='spatial_pyramid';
+% pyramid_opts.dictionarySize=dictionary_opts.dictionarySize;
+% pyramid_opts.pyramidLevels=3;
+% pyramid_opts.texton_name=assignment_opts.texton_name;
+% CompilePyramid(pg_opts,pyramid_opts);
 
-%% histogram intersection kernel
-do_classification_inter_svm
-%% pyramid bow rbf
-do_p_classification_rbf_svm   
 
-%% pyramid bow histogram intersection kernel
-do_p_classification_inter_svm
-show_results_script
+%% research
+% research_opts.dictionarySize = pyramid_opts.dictionarySize;
+% research_opts.pyramidLevels = pyramid_opts.pyramidLevels;
+research_opts.patchSize=descriptor_opts.patchSize;                                                   % normalized patch size
+research_opts.gridSpacing=descriptor_opts.gridSpacing; 
+research_opts.maxImageSize=descriptor_opts.maxImageSize;
+research_opts.dictionary_type=dictionary_opts.type;
+research_opts.name='test3.jpg';
+do_research(pg_opts,research_opts);
+
+
+

@@ -1,11 +1,6 @@
 % ========================================================================
 % Image Classification using Bag of Words and Spatial Pyramid BoW
-% Created by Piji Li (peegeelee@gmail.com)  
-% Blog: http://www.zhizhihu.com
-% QQ: 379115886
-% IRLab. : http://ir.sdu.edu.cn     
-% Shandong University,Jinan,China
-% 10/24/2011
+
 %% classification script using SVM
 
 fprintf('\nClassification using Pyramid BOW histogram intersection kernel svm\n');
@@ -16,7 +11,7 @@ load(pg_opts.labels);
 
 
 %% sift
-load([pg_opts.globaldatapath,'/',pyramid_opts.name])
+load([pg_opts.globaldatapath,'\',pyramid_opts.name])
 train_labels    = labels(trainset);          % contains the labels of the trainset
 train_data      = pyramid_all(:,trainset)';          % contains the train data
 [train_labels,sindex]=sort(train_labels);    % we sort the labels to ensure that the first label is '1', the second '2' etc
@@ -55,7 +50,8 @@ model=svmtrain(train_labels,kernel_train,options);
 kernel_test = hist_isect(test_data,train_data);
 kernel_test = [(1:size(kernel_test,1))',kernel_test];
 
-%[predict_label, accuracy , dec_values] = svmpredict(test_labels,test_data, model,'-b 1');
+
 [predict_label, accuracy , dec_values] = svmpredict(test_labels,kernel_test, model,'-b 1');
 
 confusion_matrix = confusionmat(test_labels,predict_label);
+predict_label_out=predict_label;

@@ -9,15 +9,15 @@ end
 
 
 %/data/global
-if exist([opts.datapath,'/global'],'dir')~=7
+if exist([opts.datapath,'\global'],'dir')~=7
     mkdir(opts.datapath,'global')
 end
 
 %/data/local
-if exist([opts.datapath,'/local'],'dir')~=7 % if the dir is not exist, then create it
+if exist([opts.datapath,'\local'],'dir')~=7 % if the dir is not exist, then create it
     mkdir(opts.datapath,'local')
     for ii=1:opts.nimages
-        mkdir(sprintf('%s/local',opts.datapath),num2string(ii,8));     
+        mkdir(sprintf('%s\local',opts.datapath),num2string(ii,8));     
     end
 end
 

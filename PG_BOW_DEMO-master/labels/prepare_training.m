@@ -6,38 +6,34 @@ image_names=[];
 labels=[];
 testset=[];
 trainset=[];
-classes={};
 
-file_label = fopen('labels.txt');
-class_names = textscan(file_label,'%s');
-fclose(file_label);
-
-[num_class, b] = size(class_names{1,1});
-classes = class_names{1,1};
-
-num_imgs = 0;
-for i = 1 : num_class
-    class_name = classes{i,1};
-    picstr = dir([pre_data_path, '/training/', class_name, '/*.jpg']);
-    
-    [row,col] = size(picstr);
-    picgather = cell(row,1);
-    
-    for j = 1 : row
-        num_imgs = num_imgs + 1
-        image_names{num_imgs} = ['training/', class_name,'/' picstr(j).name];
+imgDataDir  = dir(pre_data_path); % 遍历所有文件
+num_imgs=0;
+train_num=0;
+for i = 1:length(imgDataDir)
+    if(isequal(imgDataDir(i).name,'.')||... % 去除系统自带的两个隐文件夹
+       isequal(imgDataDir(i).name,'..')||...
+       ~imgDataDir(i).isdir)                % 去除遍历中不是文件夹的
+           continue;
+    end
+    imgDir = dir([pre_data_path imgDataDir(i).name '/*.jpg']); 
+    for j =1:length(imgDir)                 % 遍历所有图片
+        num_imgs = num_imgs + 1;
         labels(num_imgs, 1) = i;
-        trainset(num_imgs, 1) = 1;
-        testset(num_imgs, 1) = 0;
+        image_names{num_imgs} = [ '\training\',imgDataDir(i).name '\' imgDir(j).name];
+        if j<5
+            train_num=train_num+1;
+            trainset(train_num, 1) = num_imgs;
+        end
+        
+        
     end
 end
 
-save('image_names','image_names');
+    
+
 save('labels','labels');
-trainset=logical(trainset);
-testset=logical(testset);
+save('image_names','image_names');
 save('trainset','trainset');
-save('testset','testset');
-save('classes', 'classes');
 
 

@@ -2,7 +2,7 @@
 
 
 clear pg_opts
-rootpath='D:\Program Files\MATLAB\matlab_study\PG_BOW_DEMO-master\';
+rootpath='D:\Program Files\MATLAB\matlab_study\PG_BOW_RES\';
 
 %%
 addpath libsvm;
@@ -25,25 +25,19 @@ pg_opts.globaldatapath=sprintf('%s\\global',pg_opts.datapath);
 
 % initialize the training set
 pg_opts.trainset=sprintf('%s\\trainset.mat',pg_opts.labelspath);
-% initialize the test set
-pg_opts.testset=sprintf('%s\\testset.mat',pg_opts.labelspath);
-% initialize the labels
+
 pg_opts.labels=sprintf('%s\\labels.mat',pg_opts.labelspath);
 % initialize the image names
 pg_opts.image_names=sprintf('%s\\image_names.mat',pg_opts.labelspath);
 
-% Classes
-pg_opts.classes = load([pg_opts.labelspath,'\classes.mat']);
-pg_opts.classes = pg_opts.classes.classes;
-pg_opts.nclasses = length(pg_opts.classes);
+
+
 
 load(sprintf('%s',pg_opts.labels));
 pg_opts.nimages = size(labels,1);
-
 load(pg_opts.trainset);
-load(pg_opts.testset);
-pg_opts.ntraning = length(find(trainset==1));
-pg_opts.ntesting = length(find(testset==1));
+pg_opts.ntraning = size(trainset,1);
+
 
 %% creat the directory to save data 
 MakeDataDirectory(pg_opts);

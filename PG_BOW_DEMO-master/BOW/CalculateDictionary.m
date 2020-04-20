@@ -7,9 +7,10 @@ dictionary_flag=1;
 dictionarySize = dictionary_opts.dictionarySize;
 featureName=dictionary_opts.name;
 featuretype=dictionary_opts.type;
+load(opts.trainset);
 
 try
-    dictionary_opts2=getfield(load([opts.globaldatapath,'/',dictionary_opts.name,'_settings']),'dictionary_opts');
+    dictionary_opts2=getfield(load([opts.globaldatapath,'\',dictionary_opts.name,'_settings']),'dictionary_opts');
     if(isequal(dictionary_opts,dictionary_opts2))
         dictionary_flag=0;
         display(' dictionary has already been computed for this settings');
@@ -26,15 +27,16 @@ if(dictionary_flag)
     
     niters=100;                     %maximum iterations
     
-    image_dir=sprintf('%s/%s/',opts.localdatapath,num2string(1,8)); % location descriptor
+    image_dir=sprintf('%s\\%s\\',opts.localdatapath,num2string(1,8)); % location descriptor
     inFName = fullfile(image_dir, sprintf('%s', featureName));
     load(inFName, 'features');
     data = features.data;
     
-    image_dir=sprintf('%s/%s/',opts.localdatapath,num2string(2,8)); % location descriptor
-    inFName = fullfile(image_dir, sprintf('%s', 'sift_features'));
+    image_dir=sprintf('%s\\%s\\',opts.localdatapath,num2string(2,8)); % location descriptor
+    inFName = fullfile(image_dir, sprintf('%s', featureName));
     load(inFName, 'features');
     data = [data;features.data];
+    
     
     centres = zeros(dictionarySize, size(data,2));
     [ndata, data_dim] = size(data);
@@ -60,8 +62,9 @@ if(dictionary_flag)
         num_points=zeros(1,ncentres);
         
         for f = 1:nimages
-            fprintf('The %d th interation the %d th image. eCenter=%f \n',n,f,e2);
-            image_dir=sprintf('%s/%s/',opts.localdatapath,num2string(f,8)); % location descriptor
+            nimg=trainset(f,1);
+            fprintf('The %d th interation the %d th image. eCenter=%f \n',n,nimg,e2);
+            image_dir=sprintf('%s\\%s\\',opts.localdatapath,num2string(nimg,8)); % location descriptor
             inFName = fullfile(image_dir, sprintf('%s',featureName));
             
             
@@ -97,7 +100,7 @@ if(dictionary_flag)
             if max(max(abs(centres - old_centres))) <0.009
                 dictionary= centres;
                 fprintf('Saving texton dictionary\n');
-                save ([opts.globaldatapath,'/',featuretype],'dictionary');      % save the settings of descriptor in opts.globaldatapath
+                save ([opts.globaldatapath,'\',featuretype],'dictionary');      % save the settings of descriptor in opts.globaldatapath
                 break;
             end
             
@@ -106,7 +109,7 @@ if(dictionary_flag)
         
     end
     
-    save ([opts.globaldatapath,'/',dictionary_opts.name,'_settings'],'dictionary_opts');
+    save ([opts.globaldatapath,'\',dictionary_opts.name,'_settings'],'dictionary_opts');
     
 end
 end

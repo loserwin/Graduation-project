@@ -1,1 +1,1 @@
-pre_data_path='/home/lipiji/PG_BOW_DEMO/images/';
+pre_data_path='D:\Program Files\MATLAB\matlab_study\PG_BOW_RES\images\training\';

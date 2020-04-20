@@ -4,7 +4,7 @@ function [im]=read_image_db(opts,imIndex)
 load(opts.image_names);
 
 try
-    im=imread([opts.imgpath,'/', image_names{imIndex}]);
+    im=imread([opts.imgpath,'\', image_names{imIndex}]);
     im=double(im);
 catch
     display('image does not exist');

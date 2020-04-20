@@ -9,7 +9,7 @@ gridSpacing = descriptor_opts.gridSpacing;
 patchSize = descriptor_opts.patchSize;
 
 try
-    descriptor_opts2=getfield(load([opts.globaldatapath,'/',descriptor_opts.name,'_settings']),'descriptor_opts');
+    descriptor_opts2=getfield(load([opts.globaldatapath,'\',descriptor_opts.name,'_settings']),'descriptor_opts');
     if(isequal(descriptor_opts,descriptor_opts2))
         descriptor_flag=0;
         display('descriptor has already been computed for this settings');
@@ -27,7 +27,7 @@ if(descriptor_flag)
     
     for f = 1:nimages
         
-        I=load_image([opts.imgpath,'/', image_names{f}]);
+        I=load_image([opts.imgpath,'\', image_names{f}]);
         
         [hgt wid] = size(I);
         if min(hgt,wid) > maxImageSize
@@ -59,13 +59,16 @@ if(descriptor_flag)
         features.hgt = hgt;
         features.patchSize=patchSize;
         
-        image_dir=sprintf('%s/%s/',opts.localdatapath,num2string(f,8)); % location descriptor
-        save ([image_dir,'/','sift_features'], 'features');           % save the descriptors
+        image_dir=sprintf('%s\\%s\\',opts.localdatapath,num2string(f,8)); % location descriptor
+        %if ~exist('image_dir','dir')==0
+        %   mkdir(image_dir);
+        %end
+        save ([image_dir,'\','sift_features'], 'features');           % save the descriptors
         
         fprintf('The %d th image finished...\n',f);
         
     end % for
-    save ([opts.globaldatapath,'/',descriptor_opts.name,'_settings'],'descriptor_opts');      % save the settings of descriptor in opts.globaldatapath
+    save ([opts.globaldatapath,'\',descriptor_opts.name,'_settings'],'descriptor_opts');      % save the settings of descriptor in opts.globaldatapath
 end % if
 
 end% function
