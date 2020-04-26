@@ -103,3 +103,9 @@ INRIA Holidays 数据集与Oxford Buildings Dataset 下载速度太慢，开vpn�
 ![image](https://github.com/loserwin/Graduation-project/blob/master/resultpic/r3.jpg)
 
 
+4/26
+
+图像检索的评价指标有， 
+Precision & Recall,Precision 即查准率，Recall为查全率，前者是指检出的相关目标数占检出总数的百分比，反映了检索的准确性；后者指检索的相关目标数占系统中相关目标总数的百分比，反映检索的全面性。两者通常呈负相关。
+mAP，即图像平均检索精度(mean average precision)。这里我选择用mAP值作为标准，对检索算法进行分析。经计算，当前算法20次检索的mAP为0.5130，50次检索的mAP为0.3528。尝试使用其他图像检索算法处理当前数据集，比较与用词袋模型进行图像检索的差别。
+
